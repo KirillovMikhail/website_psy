@@ -11,7 +11,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Taviraj:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.css">
+  <script src="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.js"></script>
 </head>
 
 <body class="body">
@@ -98,7 +102,98 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="about-me">
+      <div class="container about-me__container flex">
+        <div class="about-me__block-top flex">
+          <div class="about-me__content flex">
+            <h2 class="about-me__header">Тамила Бологова</h2>
+            <p class="about-me__dsc">
+              Вот и&nbsp;получается что&nbsp;ум, разум и&nbsp;мудрость рождают гармонию и&nbsp;баланс, а&nbsp;хитрость и&nbsp;упертость порождают конфликт.
+            </p>
+            <button class="btn btn-reset about-me__btn">Подробнее обо мне</button>
+          </div>
+          <img  class="about-me__avatar" src="./img/abaout-us_avatar.png" alt="Тамила Бологова">
+        </div>
+        <div class="about-me__block-bottom"></div>
+      </div>
+    </section>
+    <section class="education">
+      <div class="container education__container flex">
+        <h2 class="education__header">Дипломы и грамоты</h2>
+        <div class="education__block">
+          <!-- Slider main container -->
+          <div class="swiper education__swipper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide education__slide">
+                <img class="education__slide-content" src="./img/diplom-1.jpg" alt="">
+              </div>
+              <div class="swiper-slide education__slide ">
+                <img class="education__slide-content" src="./img/diplom-2.jpg" alt="">
+              </div>
+              <div class="swiper-slide education__slide ">
+                <img class="education__slide-content" src="./img/diplom-3.jpg" alt="">
+              </div>
+              <div class="swiper-slide education__slide ">
+                <img class="education__slide-content" src="./img/diplom-4.jpg" alt="">
+              </div>
+              <div class="swiper-slide education__slide ">
+                <img class="education__slide-content" src="./img/diplom-5.jpg" alt="">
+              </div>
 
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="container experience__container flex">
+        <div class="experience__left">
+          <div class="experince__accor-wrapper">
+            <div class="accordion-container">
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                </h2>
+                <div class="ac-panel">
+                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                </h2>
+                <div class="ac-panel">
+                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+
+              <div class="ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                </h2>
+                <div class="ac-panel">
+                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="experince-right">
+
+        </div>
       </div>
     </section>
   </main>
@@ -107,8 +202,9 @@
 
     </div>
   </footer>
-  <script src="Inputmask-5.x/dist/inputmask.min.js"></script>
-  <script src="js/script.js"></script>
+  <script type="module" src="./js/script.js"></script>
+  <!-- <script src="Inputmask-5.x/dist/inputmask.min.js"></script> -->
+
 </body>
 
 </html>

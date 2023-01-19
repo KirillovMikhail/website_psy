@@ -62,6 +62,7 @@ body {
   --main-fonts: #273946;
   --main-elemets: #3db5e6;
   --fonts-light: #fff;
+  --bg-2: #f5f5fb;
 }
 
 .btn {
@@ -250,6 +251,147 @@ body {
 
 .advantages__icon {
   margin-bottom: 20px;
+}
+
+/* about-me */
+.about-me {
+  background-image: url(../img/bg_about-me.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-me__container {
+  flex-direction: column;
+}
+
+.about-me__block-top {
+  position: relative;
+  margin-bottom: 250px;
+  padding: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(27.5px);
+  border-bottom-left-radius: 50px;
+}
+
+.about-me__block-bottom {
+  height: 146px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(27.5px);
+  border-top-right-radius: 50px;
+}
+
+.about-me__content {
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.about-me__header {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+  color: var(--main-fonts);
+}
+
+.about-me__dsc {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: var(--main-fonts);
+}
+
+.about-me__avatar {
+  position: absolute;
+  right: 80px;
+  width: 524px;
+
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.about-me__avatar:before {
+  content: "";
+  padding-top: 100%;
+  float: left;
+}
+
+.about-me__btn {
+  width: fit-content;
+  color: var(--main-elemets);
+  background-color: #fff;
+}
+
+.education__container {
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.education__header {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+  color: var(--main-fonts);
+}
+
+.education__block {
+  padding: 44px 68px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(27.5px);
+  border-radius: 0px 50px;
+}
+
+.swiper {
+  width: 1039px;
+  height: 382px;
+}
+
+.education__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education__slide-content {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* experience */
+.experience {
+  background-color: var(--bg-2);
+  background-image: url(../img/exp-bg.jpg);
+  background-size: 32%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.experince__bg {
+  width: 32%;
+  height: 100%;
+  background-image: url(../img/exp-bg.jpg);
+}
+
+.experience__left {
+  max-width: 500px;
+
 }
 
 

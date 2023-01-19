@@ -1,0 +1,24 @@
+{
+  "name": "website_psy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillovMikhail/website_psy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KirillovMikhail/website_psy/issues"
+  },
+  "homepage": "https://github.com/KirillovMikhail/website_psy#readme",
+  "dependencies": {
+    "accordion-js": "^3.3.2",
+    "swiper": "^8.4.6"
+  }
+}

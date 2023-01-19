@@ -1,29 +1,39 @@
-const btnCall = document.querySelector('.dev__call-btn');
-const modal = document.querySelector('.dev__call-modal');
-const modalBtnClose = document.querySelector('.call__btn-close')
-const inputTel = document.getElementById('tel');
-const inputFormCall = document.querySelectorAll('.call__input')
+  // import Swiper, { Navigation, Pagination } from 'swiper';
 
-btnCall.addEventListener('click', ()=>{
-    modal.classList.toggle('visually');
-})
+  // import 'swiper/css';
+  // import 'swiper/css/navigation';
+  // import 'swiper/css/pagination';
 
-modalBtnClose.addEventListener('click', ()=> {
-    inputFormCall.forEach((el)=>clearInput(el))
-    modal.classList.remove('visually');
 
-})
+const swiper = new Swiper('.swiper', {
+  // modules: [Navigation, Pagination],
 
-function addTelMask (selector) {
-    var im = new Inputmask("+7 (999)-999-99-99");
-    im.mask(selector);
-}
+  loop: true,
+  slidesPerView: 3,
+  centeredSlides: true,
 
-function clearInput (input) {
- input.value = ''
-}
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
-addTelMask(inputTel)
-// inputTel.inputmask({
-//   showMaskOnHover: false,
-// })
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 50,
+    slideShadows: false,
+  },
+
+});
+
+// import Accordion from 'accordion-js';
+// import 'accordion-js/dist/accordion.min.css';
+
+new Accordion('.accordion-container');
