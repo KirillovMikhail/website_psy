@@ -66,6 +66,7 @@ body {
 }
 
 .btn {
+  width: fit-content;
   padding: 12px 28px;
   background-color: var(--main-elemets);
   border-radius: 50px;
@@ -112,6 +113,7 @@ body {
 .hero__block {
   position: relative;
   top: 108px;
+  width: 100%;
   padding: 80px;
   padding-bottom: 104px;
   background: rgba(255, 255, 255, 0.5);
@@ -326,7 +328,6 @@ body {
 }
 
 .about-me__btn {
-  width: fit-content;
   color: var(--main-elemets);
   background-color: #fff;
 }
@@ -376,22 +377,210 @@ body {
 
 /* experience */
 .experience {
+  padding: 80px 0;
   background-color: var(--bg-2);
   background-image: url(../img/exp-bg.jpg);
-  background-size: 32%;
+  background-size: 32% 95%;
   background-repeat: no-repeat;
   background-position: left top;
 }
 
-.experince__bg {
+/* .experince__bg {
   width: 32%;
   height: 100%;
   background-image: url(../img/exp-bg.jpg);
-}
+} */
 
 .experience__left {
   max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 50px;
+}
 
+.experince__accor-wrapper {
+  width: 500px;
+  height: 100%;
+  flex-direction: column;
+  padding: 32px 80px 64px;
+
+}
+
+.accordion-container {
+  margin-bottom: auto       ;
+  width: 100%;
+}
+
+.ac.experince__ac {
+  margin: 0;
+  border: none;
+}
+
+.ac-header .ac-trigger.experience__trigger {
+  padding: 0;
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 72px;
+  color: var(--main-fonts);
+}
+
+.ac .ac-trigger.experience__trigger::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--main-fonts);
+  border-left: 1px solid var(--main-fonts);
+  transform: rotate(-135deg);
+  transition: transform .3s ease-in-out;
+}
+
+.ac.is-active .ac-header .ac-trigger.experience__trigger::after {
+  content: '';
+  transform: rotate(45deg);
+}
+
+.ac.is-active .ac-panel .ac-text.experience__text {
+  padding: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--main-fonts);
+}
+
+.ac .ac-panel .ac-text.experience__text {
+  padding: 0;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--main-fonts);
+}
+
+.experince-right {
+  flex-direction: column;
+  padding-left: 70px;
+}
+
+.experience__header {
+  padding: 0;
+  margin: 0;
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+}
+
+.experience__content {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--main-elemets);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--main-fonts);
+}
+
+.experiensce__skill {
+  padding: 0;
+  margin: 0;
+  margin-right: 32px;
+  max-width: 160px;
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--main-fonts);
+}
+
+.experince__item {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--main-fonts);
+}
+
+/* contacts */
+.contacts {
+  padding: 80px 0;
+  background-image: url(../img/bg_contacts.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.contacts__form {
+  flex-direction: column;
+  min-width: 672px;
+}
+
+.contacts__fieldset {
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  border:  none;
+  max-width: 100%;
+}
+
+.contacts__form-header {
+  margin-bottom: 24px;
+  font-family: 'Taviraj';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 72px;
+}
+
+.contact__input {
+  padding: 16px 28px;
+  opacity: 0.85;
+  box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: var(--main-fonts);
+}
+
+.contact__input:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.contact__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: var(--main-fonts);
+}
+
+.contact__question {
+  padding: 16px 28px;
+  opacity: 0.85;
+  box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0 50px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: var(--main-fonts);
+  resize: none;
+}
+
+.contact__question::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  color: var(--main-fonts);
 }
 
 

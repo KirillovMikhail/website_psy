@@ -36,4 +36,5 @@ const swiper = new Swiper('.swiper', {
 // import Accordion from 'accordion-js';
 // import 'accordion-js/dist/accordion.min.css';
 
-new Accordion('.accordion-container');
+const acc = new Accordion('.accordion-container');
+acc.open(0)

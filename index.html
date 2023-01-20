@@ -35,7 +35,7 @@
   </header>
   <main class="main">
     <section class="hero">
-      <div class="container hero__container">
+      <div class="container hero__container flex">
         <div class="hero__block flex">
           <div class="hero__content flex">
             <h1 class="hero__header">Психолог</h1>
@@ -160,39 +160,122 @@
     <section class="experience">
       <div class="container experience__container flex">
         <div class="experience__left">
-          <div class="experince__accor-wrapper">
+          <div class="experince__accor-wrapper flex">
             <div class="accordion-container">
-              <div class="ac">
+              <div class="ac experince__ac">
                 <h2 class="ac-header">
-                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                  <button type="button" class="ac-trigger experience__trigger">Психотерапия</button>
                 </h2>
                 <div class="ac-panel">
-                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="ac-text experience__text">Таким образом, реализация намеченных плановых заданий в&nbsp;значительной степени обусловливает важность кластеризации усилий.</p>
                 </div>
               </div>
 
-              <div class="ac">
+              <div class="ac experince__ac">
                 <h2 class="ac-header">
-                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                  <button type="button" class="ac-trigger experience__trigger">Как мы построим нашу с вами работу</button>
                 </h2>
                 <div class="ac-panel">
-                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="ac-text experience__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
 
-              <div class="ac">
+              <div class="ac experince__ac">
                 <h2 class="ac-header">
-                  <button type="button" class="ac-trigger">Lorem ipsum dolor sit amet.</button>
+                  <button type="button" class="ac-trigger experience__trigger">Консультация онлайн</button>
                 </h2>
                 <div class="ac-panel">
-                  <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p class="ac-text experience__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+
+              <div class="ac experince__ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger experience__trigger">Детская терапия</button>
+                </h2>
+                <div class="ac-panel">
+                  <p class="ac-text experience__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+
+              <div class="ac experince__ac">
+                <h2 class="ac-header">
+                  <button type="button" class="ac-trigger experience__trigger">Бесспокойство, стресс и депрессия</button>
+                </h2>
+                <div class="ac-panel">
+                  <p class="ac-text experience__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
               </div>
             </div>
+            <button class="btn btn-reset experience__btn">Запланировать звонок</button>
+          </div>
+
+          </div>
+
+        <div class="experince-right flex">
+          <h2 class="experience__header">Опыт работы</h2>
+          <p class="experience__content">
+            Работаю в&nbsp;гештальт-терапевтическом подходе, клинический психолог ведущей многопрофильной детской больницы&nbsp;г. Москва.
+            Начало практики с&nbsp;2010&nbsp;года, постоянно совершенствуюсь в&nbsp;выбранной профессии, которую по&nbsp;настоящему люблю.
+            Имею личную терапию, постоянно прохожу супервизию.
+          </p>
+          <div class="experience__wrapper flex">
+            <p class="experiensce__skill">Работаю с&nbsp;такими проблемами, как:</p>
+            <ul class="experience__skill-list list-reset">
+              <li class="experince__item">Агрессия</li>
+              <li class="experince__item">Гиперактивность</li>
+              <li class="experince__item">Тревожность</li>
+              <li class="experince__item">Эмоциональность</li>
+              <li class="experince__item">Адаптация к болезни</li>
+              <li class="experince__item">Депрессия</li>
+              <li class="experince__item">Трудности в общении</li>
+              <li class="experince__item">Нарушения пищевого поведения</li>
+              <li class="experince__item">Утрата</li>
+              <li class="experince__item">Горе</li>
+              <li class="experince__item">Психосоматика</li>
+              <li class="experince__item">Самоопределение</li>
+              <li class="experince__item">Зависимость </li>
+            </ul>
           </div>
         </div>
-        <div class="experince-right">
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container ontacts__container flex">
+        <div class="contacts__left">
+          <form class="contacts__form flex" action="url" method="post">
+            <fieldset class="contacts__fieldset flex">
+              <legend class="contacts__form-header">Форма для связи</legend>
+              <input class="contact__input" id="contact__input" type="text" name="name" placeholder="Имя Фамилия" required>
+              <input class="contact__input" type="email" name="email" placeholder="Email" required>
+              <input class="contact__input" type="text" name="tel" placeholder="Телефон" required>
+              <textarea class="contact__question" name="question" id="contact__question" cols="30" rows="10" placeholder="Мой вопрос"></textarea>
+            </fieldset>
+            <button class="btn btn-reset contacts__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="contacts__right">
+          <div class="contacts__right-content">
+            <ul class="contact__list">
+              <li class="contacts__item">
+                <h3 class="contacts__item-header">Телефон</h3>
+                <a class="contacts__contact contacts__item-text" href="tel:+7901526-73-99">+7(901)526-73-99</a>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__item-header">Email</h3>
+                <a class="contacts__contact contacts__item-text" href="mailto:Test@mail.ru">Test@mail.ru</a>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__item-header">Адрес</h3>
+                <address class="contacts__adress contacts__item-text">Россия, Москва, Ленинский проспект 117</address>
+              </li>
+              <li class="contacts__item">
+                <h3 class="contacts__item-header">График</h3>
+                <span class="contacts__item-text">Пн-Вс: По Записи</span>
+              </li>
+            </ul>
 
+          </div>
         </div>
       </div>
     </section>
