@@ -5,7 +5,7 @@
   // import 'swiper/css/pagination';
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.education__swipper', {
   // modules: [Navigation, Pagination],
 
   loop: true,
@@ -38,3 +38,21 @@ const swiper = new Swiper('.swiper', {
 
 const acc = new Accordion('.accordion-container');
 acc.open(0)
+
+const swiperModal = new Swiper('.modal__swiper', {
+  // modules: [Navigation, Pagination],
+
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
