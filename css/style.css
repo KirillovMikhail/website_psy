@@ -18,7 +18,8 @@ image {
 }
 
 body {
-  min-width: 320px;
+  /* изменить потом на 320px */
+  min-width: 1600px;
   font-family: 'Open Sans', sans-serif;
   background-color: #fff;
 }
@@ -76,10 +77,30 @@ body {
   padding: 12px 28px;
   background-color: var(--main-elemets);
   border-radius: 50px;
+  outline: 4px solid transparent;
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
   color: var(--fonts-light);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.btn:focus {
+  background-color: #fff;
+  color: var(--main-elemets);
+}
+
+.btn:hover {
+  cursor: url(../img/cursor.svg), pointer;
+  outline: 4px solid #fff;
+  background-color: var(--main-elemets);
+  color: var(--fonts-light);
+}
+
+.btn:active {
+  color: var(--fonts-light);
+  outline-color: transparent;
+  background-color: var(--main-elemets);
 }
 
 /* header */
@@ -104,6 +125,31 @@ body {
 
 .nav__item:not(:last-child) {
   margin-right: 32px;
+}
+
+.nav__link {
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.nav__link:focus {
+  outline: none;
+  border-color: var(--main-elemets);
+}
+
+.nav__link:hover {
+  color: var(--main-elemets);
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.nav__link:active {
+  color: var(--main-elemets);
+  border-color: var(--main-elemets);
+}
+
+.main {
+  max-width: 2560px;
+  margin: 0 auto;
 }
 
 /* hero */
@@ -240,11 +286,36 @@ body {
 .advantages__buttom-item {
   flex-direction: column;
   align-items: center;
-  padding: 45px 65px 53px;
+  padding: 45px 35px 53px;
   background-color: #fff;
   box-shadow: 0px 6px 20px -6px rgba(131, 146, 167, 0.3);
   border-radius: 0px 50px;
+  width: 100%;
   max-width: 236px;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.advantages__buttom-item:focus {
+  outline: none;
+  box-shadow: 0px 6px 20px -6px rgba(61, 181, 230, 0.8);
+}
+
+.advantages__buttom-item:hover {
+  box-shadow: 0px 6px 20px -6px rgba(61, 181, 230, 0.8);
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.advantages__buttom-item:active {
+  box-shadow: 0px 6px 20px -6px rgba(61, 181, 230, 0.8);
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.advantages__buttom-item:active .advantages__header{
+  color: var(--main-elemets);
+}
+
+.advantages__buttom-item:active .advantages__icon{
+  stroke: var(--main-elemets);
 }
 
 .advantages__header {
@@ -259,6 +330,7 @@ body {
 
 .advantages__icon {
   margin-bottom: 20px;
+  stroke: var(--main-fonts);
 }
 
 /* about-me */
@@ -338,6 +410,23 @@ body {
   background-color: #fff;
 }
 
+.about-me__btn:focus {
+  background-color: var(--main-elemets);
+  color: var(--fonts-light);
+}
+
+.about-me__btn:hover {
+  background-color: #fff;
+  color: var(--main-elemets);
+  outline: 4px solid var(--main-elemets);
+}
+
+.about-me__btn:active {
+  background-color: #fff;
+  color: var(--main-elemets);
+  outline: 4px solid transparent;
+}
+
 .education__container {
   flex-direction: column;
   align-items: center;
@@ -382,22 +471,36 @@ body {
   object-fit: contain;
 }
 
-.education__swipper .swiper-button-prev:after {
+.education__swipper .swiper-button-prev::after {
   content: '';
   width: 30px;
   height: 30px;
   border-top: 6px solid var(--main-elemets);
   border-left: 6px solid var(--main-elemets);
   transform: rotate(-45deg);
+  transition: border .3s ease-in-out;
 }
 
-.education__swipper .swiper-button-next:after {
+.education__swipper .swiper-button-prev:hover::after {
+  border-top: 10px solid var(--main-elemets);
+  border-left: 10px solid var(--main-elemets);
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.education__swipper .swiper-button-next::after {
   content: '';
   width: 30px;
   height: 30px;
   border-top: 6px solid var(--main-elemets);
   border-left: 6px solid var(--main-elemets);
   transform: rotate(135deg);
+  transition: border .3s ease-in-out;
+}
+
+.education__swipper .swiper-button-next:hover::after {
+  border-top: 10px solid var(--main-elemets);
+  border-left: 10px solid var(--main-elemets);
+  cursor: url(../img/cursor.svg), pointer;
 }
 
 .swiper.education__swipper .swiper-pagination {
@@ -425,12 +528,6 @@ body {
   background-repeat: no-repeat;
   background-position: left top;
 }
-
-/* .experince__bg {
-  width: 32%;
-  height: 100%;
-  background-image: url(../img/exp-bg.jpg);
-} */
 
 .experience__left {
   max-width: 500px;
@@ -595,6 +692,8 @@ body {
   font-size: 14px;
   line-height: 27px;
   color: var(--main-fonts);
+  outline: 4px solid transparent;
+  transition: outline .3s ease-in-out;
 }
 
 .contact__input:not(:last-child) {
@@ -606,6 +705,19 @@ body {
   font-size: 14px;
   line-height: 27px;
   color: var(--main-fonts);
+  transition: color .3s ease-in-out;
+}
+
+.contact__input:focus {
+  outline: 4px solid var(--main-elemets)
+}
+
+.contact__input:hover {
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.contact__input:hover::placeholder {
+  color: var(--main-elemets);
 }
 
 .contact__question {
@@ -614,12 +726,14 @@ body {
   box-shadow: 0px 5px 30px 10px rgba(0, 0, 0, 0.15);
   border-radius: 0 50px;
   border: none;
+  outline: 4px solid transparent;
   font-weight: 400;
   font-size: 14px;
   line-height: 27px;
   color: var(--main-fonts);
   resize: none;
   overflow: hidden;
+  transition: outline .3s ease-in-out;
 }
 
 .contact__question::placeholder {
@@ -627,6 +741,19 @@ body {
   font-size: 14px;
   line-height: 27px;
   color: var(--main-fonts);
+  transition: color .3s ease-in-out;
+}
+
+.contact__question:focus {
+  outline: 4px solid var(--main-elemets)
+}
+
+.contact__question:hover {
+  cursor: url(../img/cursor.svg), pointer;
+}
+
+.contact__question:hover::placeholder {
+  color: var(--main-elemets);
 }
 
 .contacts__right {
@@ -759,11 +886,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 44px 68px;
+  width: 100%;
   max-width: 933px;
   min-height: 512px;
   background-color: #fff;
-  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(27.5px);
   border-radius: 0px 50px;
   background-image: url(../img/modal-slide-1.svg);
   background-repeat: no-repeat;
@@ -838,6 +964,10 @@ body {
 
 .swiper.modal__swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fff;
+}
+
+.vissual {
+  display: flex !important;
 }
 
 
