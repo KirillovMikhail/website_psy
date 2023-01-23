@@ -1,9 +1,4 @@
-//  // core version + navigation, pagination modules:
-//  import Swiper, { Navigation, Pagination } from 'swiper';
-//  // import Swiper and modules styles
-//  import 'swiper/css';
-//  import 'swiper/css/navigation';
-//  import 'swiper/css/pagination';
+
 
 
 const swiper = new Swiper('.education__swipper', {
@@ -34,8 +29,7 @@ const swiper = new Swiper('.education__swipper', {
 
 });
 
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
+
 
 const acc = new Accordion('.accordion-container');
 acc.open(0)
