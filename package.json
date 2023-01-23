@@ -1,24 +1,23 @@
 {
   "name": "website_psy",
-  "version": "1.0.0",
+
   "description": "",
-  "main": "script.js",
-  "type": "module",
+
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KirillovMikhail/website_psy.git"
-  },
-  "author": "",
+
+  "author": "Mikhail Kirillov",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KirillovMikhail/website_psy/issues"
-  },
-  "homepage": "https://github.com/KirillovMikhail/website_psy#readme",
+
   "dependencies": {
     "accordion-js": "^3.3.2",
     "swiper": "^8.4.6"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
   }
 }
