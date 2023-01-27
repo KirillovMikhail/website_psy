@@ -55,7 +55,8 @@ const swiperModal = new Swiper('.modal__swiper', {
 const advBtn = document.querySelectorAll('.advantages__buttom-item');
 const modalWin = document.querySelector('.modal');
 const modalSwiperDom = document.querySelector('.modal__swiper');
-const modalNextSlide = document.querySelector('.modal__swiper-next')
+const modalNextSlide = document.querySelector('.modal__swiper-next');
+const contactForm = document.querySelector('.contacts__form');
 
 advBtn.forEach((el)=>{
   el.addEventListener('click', ()=>{
@@ -103,7 +104,50 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
     })
   }
 
+  var selector = document.getElementById("tel");
+  var im = new Inputmask("+7 (999)-999-99-99");
+  im.mask(selector);
 
 
 
+  const formSubmit = document.querySelector('.contacts__btn');
+  const inputs = document.querySelectorAll('.contact__input');
+  const textArea = document.querySelector('.contact__question');
 
+  const sbmWidth = formSubmit.offsetWidth
+  const wrapper = formSubmit.firstChild
+
+
+  function clearForm(button, inputs, textArea) {
+      button.textContent='Отправить'
+      inputs.forEach((e)=>{
+        e.value='';
+      })
+      textArea.value=''
+
+  }
+
+  async function sendForm(form) {
+    const currentUrl = window.location.href;
+    let response = await fetch(currentUrl, {
+    method: `POST`,
+    body: new FormData(form)
+    })
+  }
+
+
+  contactForm.addEventListener('submit', async (e)=>{
+    e.preventDefault()
+    sendForm(contactForm)
+    formSubmit.style.width = (formSubmit.offsetWidth)+'px';
+    wrapper.textContent='Заявка отправлена!'
+    formSubmit.style.width = (wrapper.offsetWidth+56)+'px';
+    formSubmit.classList.add('contacts__btn-send')
+    setTimeout(()=> {
+      clearForm(wrapper, inputs, textArea);
+      formSubmit.style.width=sbmWidth+'px';
+    }, 2000)
+
+  })
+
+3

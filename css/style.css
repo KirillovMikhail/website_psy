@@ -756,6 +756,18 @@ body {
   color: var(--main-elemets);
 }
 
+.contacts__btn {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width .3s ease-in-out;
+}
+
+.contacts__btn span {
+  display: inline-block;
+  width: auto;
+}
+
 .contacts__right {
   position: relative;
   top: -80px;

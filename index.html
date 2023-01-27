@@ -289,17 +289,17 @@
     <section class="contacts" id="contacts">
       <div class="container contacts__container flex">
         <div class="contacts__left">
-          <form class="contacts__form flex" action="url" method="post">
+          <form class="contacts__form flex">
             <fieldset class="contacts__fieldset flex">
               <legend class="contacts__form-header">Форма для связи</legend>
               <input class="contact__input" id="contact__input" type="text" name="name" placeholder="Имя Фамилия"
                 required>
               <input class="contact__input" type="email" name="email" placeholder="Email" required>
-              <input class="contact__input" type="text" name="tel" placeholder="Телефон" required>
+              <input class="contact__input" id="tel" type="text" name="tel" placeholder="Телефон" minlength="18" maxlength="18" required>
               <textarea class="contact__question" name="question" id="contact__question" cols="30" rows="10"
                 placeholder="Мой вопрос"></textarea>
             </fieldset>
-            <button class="btn btn-reset contacts__btn" type="submit">Отправить</button>
+            <button class="btn btn-reset contacts__btn" type="submit"><span>Отправить</span></button>
           </form>
         </div>
         <div class="contacts__right">
@@ -521,6 +521,7 @@
       <div class="swiper-button-next modal__swiper-next"></div>
     </div>
   </div>
+  <script src="Inputmask-5.x/dist/inputmask.min.js"></script>
   <script src="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
