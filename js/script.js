@@ -34,6 +34,8 @@ const swiper = new Swiper('.education__swipper', {
 const acc = new Accordion('.accordion-container');
 acc.open(0)
 
+const accQaa = new Accordion('.qaa__acc')
+
 const swiperModal = new Swiper('.modal__swiper', {
   // modules: [Navigation, Pagination],
 
@@ -128,11 +130,23 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
   }
 
   async function sendForm(form) {
-    const currentUrl = window.location.href;
-    let response = await fetch(currentUrl, {
-    method: `POST`,
-    body: new FormData(form)
-    })
+    try {
+      const currentUrl = window.location.href;
+      let response = await fetch('http://psylingva.ru/dev/', {
+      method: `POST`,
+      body: new FormData(form)
+      })
+      const data = await response
+      if (!response.ok) {
+        throw new Error(data.message || 'Что-то пошло не так')
+      }
+    } catch (e) {
+      console.log(e.message)
+    }
+
+    // if (!response.ok) {
+    //   throw new Error(response.statusText)
+    // }
   }
 
 
@@ -150,4 +164,20 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
 
   })
 
-3
+  const ButtonUp = document.querySelector('.btn-up')
+
+
+window.addEventListener('scroll', ()=>{
+  let scrollValue = window.pageYOffset;
+  if (scrollValue>100) {
+    ButtonUp.style.visibility = 'visible'
+  } else {
+    ButtonUp.style.visibility = 'hidden'
+  }
+}, { passive: true })
+
+ButtonUp.addEventListener('click', ()=>{
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+})
+
+
