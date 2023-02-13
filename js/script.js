@@ -130,24 +130,13 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
   }
 
   async function sendForm(form) {
-    try {
-      const currentUrl = window.location.href;
-      let response = await fetch('http://psylingva.ru/dev/', {
-      method: `POST`,
-      body: new FormData(form)
-      })
-      const data = await response
-      if (!response.ok) {
-        throw new Error(data.message || 'Что-то пошло не так')
-      }
-    } catch (e) {
-      console.log(e.message)
-    }
-
-    // if (!response.ok) {
-    //   throw new Error(response.statusText)
-    // }
+    const currentUrl = window.location.href;
+    let response = await fetch(currentUrl, {
+    method: `POST`,
+    body: new FormData(form)
+    })
   }
+
 
 
   contactForm.addEventListener('submit', async (e)=>{
