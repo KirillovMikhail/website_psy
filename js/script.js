@@ -27,6 +27,18 @@ const swiper = new Swiper('.education__swipper', {
     slideShadows: false,
   },
 
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+
+    1000: {
+      slidesPerView: 3,
+
+    }
+  }
+
 });
 
 

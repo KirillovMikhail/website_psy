@@ -366,14 +366,6 @@ body {
   border-bottom-left-radius: 50px;
 }
 
-.about-me__block-bottom {
-  height: 146px;
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0px -2px 80px 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(27.5px);
-  border-top-right-radius: 50px;
-}
-
 .about-me__content {
   flex-direction: column;
   max-width: 50%;
@@ -768,6 +760,7 @@ body {
   box-shadow: 0px -2px 40px 10px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 1);
 }
+
 .contacts {
   padding: 80px 0;
   background-image: url(../img/bg_contacts.jpg);
@@ -1182,4 +1175,104 @@ body {
   border-width: 8px;
 }
 
+@media (max-width:1200px) {
+  .empty-block {
+    width: 100%;
+    border-radius: 0;
+  }
 
+  .container {
+    width: calc(100% - 30px);
+  }
+}
+
+@media(max-width: 1000px) {
+  .advantages {
+    position: relative;
+  }
+
+  .advantages__block {
+    padding-bottom: 0;
+  }
+
+  .advantages__top {
+    margin-bottom: 0;
+  }
+
+  .advantages__buttom {
+    overflow-x: scroll;
+    text-align: center;
+    margin-left: -110px;
+    margin-right: -110px;
+    padding-bottom: 80px;
+    padding-top: 56px;
+  }
+
+  .advantages__buttom-list {
+    justify-content: center;
+    width: max-content;
+  }
+
+  .advantages__buttom-item {
+    min-width: 236px;
+  }
+
+  .advantages__buttom-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .about-me__block-top {
+    flex-direction: column;
+    padding-bottom: 300px;
+  }
+
+  .about-me__content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .about-me__dsc {
+    text-align: center;
+  }
+
+  .about-me__avatar {
+    max-width: 80%;
+    right: 50%;
+    top: 25%;
+    transform: translate(50%, 50%);
+  }
+
+  /* .experience {
+    background-image: none;
+  } */
+
+  .experience__container {
+    flex-direction: column-reverse;
+  }
+
+  .experience__header {
+    align-self: center;
+  }
+
+  .experience__wrapper {
+    flex-direction: column;
+  }
+
+  .experiensce__skill {
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .experince-right {
+    padding-bottom: 32px;
+    background-color: var(--bg-2);
+  }
+
+  .experience__left {
+    width: 100%;
+  }
+
+  .experince__accor-wrapper {
+    width: 100%;
+  }
+}
