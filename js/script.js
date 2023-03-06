@@ -141,6 +141,12 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
 
   }
 
+  async function loadTodoItems() {
+    const response = await fetch('http://psylingva.ru/dev/');
+    const data = await response.json();
+    console.log(data);
+  }
+
   async function sendForm(form) {
     const currentUrl = window.location.href;
     let response = await fetch(currentUrl, {
@@ -153,15 +159,16 @@ const anchors = document.querySelectorAll('a[href*="#"]') // links
 
   contactForm.addEventListener('submit', async (e)=>{
     e.preventDefault()
-    sendForm(contactForm)
-    formSubmit.style.width = (formSubmit.offsetWidth)+'px';
-    wrapper.textContent='Заявка отправлена!'
-    formSubmit.style.width = (wrapper.offsetWidth+56)+'px';
-    formSubmit.classList.add('contacts__btn-send')
-    setTimeout(()=> {
-      clearForm(wrapper, inputs, textArea);
-      formSubmit.style.width=sbmWidth+'px';
-    }, 2000)
+    loadTodoItems()
+    // sendForm(contactForm)
+    // formSubmit.style.width = (formSubmit.offsetWidth)+'px';
+    // wrapper.textContent='Заявка отправлена!'
+    // formSubmit.style.width = (wrapper.offsetWidth+56)+'px';
+    // formSubmit.classList.add('contacts__btn-send')
+    // setTimeout(()=> {
+    //   clearForm(wrapper, inputs, textArea);
+    //   formSubmit.style.width=sbmWidth+'px';
+    // }, 2000)
 
   })
 
@@ -180,5 +187,28 @@ window.addEventListener('scroll', ()=>{
 ButtonUp.addEventListener('click', ()=>{
   window.scrollTo({ top: 0, behavior: 'smooth' })
 })
+
+  let burger = document.querySelector('.burger')
+  let menu = document.querySelector('.header__nav')
+  let menuLinks = document.querySelectorAll('.nav__item')
+
+
+
+  burger.addEventListener('click',
+    function () {
+      burger.classList.toggle('header__burger--active');
+      menu.classList.toggle('header__nav--active');
+      document.body.classList.toggle('stop-scroll');
+
+  })
+
+menuLinks.forEach(function (el) {
+  el.addEventListener('click', function () {
+    burger.classList.remove('header__burger--active');
+    menu.classList.remove('header__nav--active');
+    document.body.classList.remove('stop-scroll');
+
+  })
+  })
 
 

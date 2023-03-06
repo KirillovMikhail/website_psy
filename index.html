@@ -12,15 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Taviraj:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.2/dist/accordion.min.css">
   <link rel="stylesheet" href="./css/style.css">
-
-
-
-
-
 </head>
 
 <body class="body">
@@ -46,6 +42,11 @@
           </li>
         </ul>
       </nav>
+      <div class="burger header__burger flex" tabindex="0" role="menu" aria-label="Меню">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </div>
     </div>
   </header>
   <main class="main">
@@ -86,7 +87,7 @@
           </div>
           <div class="advantages__buttom">
             <ul class="advantages__buttom-list list-reset flex">
-              <li class="advantages__buttom-item flex" tabindex="0" role="button" aria-label="Теропия" data-slide="1">
+              <li class="advantages__buttom-item flex" tabindex="0" data-slide="1">
                 <svg class="advantages__icon" width="60" height="61" viewBox="0 0 60 61" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -101,7 +102,7 @@
                 </svg>
                 <h3 class="advantages__header">Семейная психотерапия</h3>
               </li>
-              <li class="advantages__buttom-item flex" tabindex="0" role="button" aria-label="Теропия" data-slide="2">
+              <li class="advantages__buttom-item flex" tabindex="0"  data-slide="2">
                 <svg class="advantages__icon" width="60" height="61" viewBox="0 0 60 61" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -117,7 +118,7 @@
                 </svg>
                 <h3 class="advantages__header">Подростковая и детская психотерапия</h3>
               </li>
-              <li class="advantages__buttom-item flex" tabindex="0" role="button" aria-label="Теропия" data-slide="3">
+              <li class="advantages__buttom-item flex" tabindex="0"  data-slide="3">
                 <svg class="advantages__icon" width="60" height="61" viewBox="0 0 60 61" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -129,7 +130,7 @@
                 </svg>
                 <h3 class="advantages__header">Личная<br>психотерапия</h3>
               </li>
-              <li class="advantages__buttom-item flex" tabindex="0" role="button" aria-label="Теропия" data-slide="4">
+              <li class="advantages__buttom-item flex" tabindex="0"  data-slide="4">
                 <svg class="advantages__icon" width="60" height="61" viewBox="0 0 60 61" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -153,7 +154,7 @@
               Вот и&nbsp;получается что&nbsp;ум, разум и&nbsp;мудрость рождают гармонию и&nbsp;баланс, а&nbsp;хитрость
               и&nbsp;упертость порождают конфликт.
             </p>
-            <button class="btn btn-reset about-me__btn">Подробнее обо мне</button>
+            <a href="#experience" class="btn btn-reset about-me__btn">Подробнее обо мне</a>
           </div>
           <img class="about-me__avatar" src="./img/abaout-us_avatar.png" alt="Тамила Бологова">
         </div>
@@ -233,11 +234,13 @@
     <section class="experience" id="experience">
       <div class="container experience__container flex">
         <div class="experience__left">
-          <svg class="experience__line" width="503" height="2" viewBox="0 0 503 2" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1C35.7098 1 349.462 1 502 1" stroke="#3db5e6" stroke-linecap="round" stroke-dasharray="12 4" />
-          </svg>
+
           <div class="experince__accor-wrapper flex">
+            <svg class="experience__line" width="503" height="2" viewBox="0 0 503 2" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1C35.7098 1 349.462 1 502 1" stroke="#3db5e6" stroke-linecap="round"
+                stroke-dasharray="12 4" />
+            </svg>
             <h2 class="experince__header">ПОЧЕМУ КОНСУЛЬТАЦИИ СО МНОЙ ТАК ЭФФЕКТИВНЫ?</h2>
             <div class="accordion-container">
               <div class="ac experince__ac">
@@ -314,7 +317,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn-reset experience__btn btn">Запланировать звонок</button>
+            <a href="#contacts" class="btn-reset experience__btn btn">Запланировать звонок</a>
           </div>
 
         </div>
@@ -446,8 +449,8 @@
 
             </div>
           </div>
-
         </div>
+      </div>
     </section>
     <div class="empty-block"></div>
     <section class="contacts" id="contacts">
@@ -465,7 +468,8 @@
                 placeholder="Мой вопрос"></textarea>
             </fieldset>
             <label class="contact__label-check">
-              <input class="contacts__check visually-hidden" type="checkbox" name="rule" required>Я даю соглашение на обработку персональных данных*
+              <input class="contacts__check visually-hidden" type="checkbox" name="rule" required>Я даю соглашение на
+              обработку персональных данных*
               <span class="contact__check"></span>
             </label>
             <button class="btn btn-reset contacts__btn" type="submit"><span>Отправить</span></button>
@@ -493,42 +497,42 @@
             </ul>
             <ul class="social contacts__social list-reset flex">
               <li class="social__item contacts__social-item">
-                <a href="#" class="sosial__link">
+                <a href="#" class="social__link">
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M12.7499 31.1666H21.2499C28.3333 31.1666 31.1666 28.3333 31.1666 21.2499V12.7499C31.1666 5.66659 28.3333 2.83325 21.2499 2.83325H12.7499C5.66659 2.83325 2.83325 5.66659 2.83325 12.7499V21.2499C2.83325 28.3333 5.66659 31.1666 12.7499 31.1666Z"
-                      stroke="#273946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     <path
                       d="M17.0001 21.9584C17.6512 21.9584 18.296 21.8302 18.8976 21.581C19.4991 21.3318 20.0457 20.9666 20.5062 20.5062C20.9666 20.0457 21.3318 19.4991 21.581 18.8976C21.8302 18.296 21.9584 17.6512 21.9584 17.0001C21.9584 16.3489 21.8302 15.7042 21.581 15.1026C21.3318 14.501 20.9666 13.9544 20.5062 13.494C20.0457 13.0336 19.4991 12.6684 18.8976 12.4192C18.296 12.17 17.6512 12.0417 17.0001 12.0417C15.6851 12.0417 14.4239 12.5641 13.494 13.494C12.5641 14.4239 12.0417 15.6851 12.0417 17.0001C12.0417 18.3151 12.5641 19.5763 13.494 20.5062C14.4239 21.436 15.6851 21.9584 17.0001 21.9584V21.9584Z"
-                      stroke="#273946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M24.9844 9.91675H24.9964" stroke="#273946" stroke-width="2" stroke-linecap="round"
+                      stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M24.9844 9.91675H24.9964" stroke="#" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                 </a>
               </li>
               <li class="social__item contacts__social-item">
-                <a href="#" class="sosial__link">
+                <a href="#" class="social__link">
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M9.77492 29.1833C11.8999 30.4583 14.4499 31.1666 16.9999 31.1666C24.7916 31.1666 31.1666 24.7916 31.1666 16.9999C31.1666 9.20825 24.7916 2.83325 16.9999 2.83325C9.20825 2.83325 2.83325 9.20825 2.83325 16.9999C2.83325 19.5499 3.54159 21.9583 4.67492 24.0833L3.45659 28.7668C3.39373 29.0085 3.39593 29.2626 3.46296 29.5033C3.52999 29.744 3.65946 29.9626 3.83825 30.1371C4.01705 30.3116 4.2388 30.4357 4.48102 30.4968C4.72325 30.5579 4.97733 30.5539 5.2175 30.4852L9.77492 29.1833Z"
-                      stroke="#273946" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke="" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
                       stroke-linejoin="round" />
                     <path
                       d="M23.375 21.0347C23.375 21.2642 23.324 21.5007 23.2149 21.7302C23.1036 21.9674 22.9575 22.1866 22.7814 22.3805C22.4683 22.7248 22.1241 22.9727 21.7331 23.1328C21.3506 23.2928 20.9355 23.375 20.4893 23.375C19.8376 23.375 19.142 23.222 18.4067 22.9103C17.6295 22.5733 16.8928 22.1494 16.2109 21.6467C15.4693 21.1049 14.7694 20.5082 14.1171 19.8617C13.4717 19.213 12.8764 18.5164 12.3363 17.7777C11.84 17.1018 11.42 16.373 11.084 15.6046C10.778 14.875 10.625 14.1808 10.625 13.5193C10.625 13.0858 10.7015 12.6721 10.8545 12.2896C11.0075 11.9 11.2512 11.543 11.5897 11.2242C11.9977 10.8219 12.444 10.625 12.9172 10.625C13.0957 10.625 13.2742 10.6632 13.4342 10.7397C13.6 10.8162 13.7459 10.931 13.8621 11.0968L15.3439 13.1821C15.4573 13.3408 15.5422 13.4881 15.5989 13.6283C15.6556 13.7615 15.6882 13.8961 15.6882 14.0165C15.6863 14.1772 15.6397 14.3342 15.5536 14.4698C15.4552 14.6357 15.3352 14.7877 15.1966 14.9217L14.7107 15.4261C14.6769 15.4592 14.6503 15.4989 14.6328 15.5428C14.6152 15.5867 14.607 15.6338 14.6087 15.6811C14.6087 15.7307 14.6158 15.776 14.6285 15.827C14.6469 15.878 14.6668 15.9162 14.6795 15.9545C14.7928 16.1656 14.9912 16.439 15.2731 16.7705C15.5607 17.102 15.8667 17.4406 16.1982 17.7777C16.5438 18.1163 16.8753 18.428 17.2139 18.7156C17.5454 18.9947 17.8203 19.1859 18.037 19.3007L18.1532 19.3531C18.204 19.3712 18.2578 19.3799 18.3118 19.3786C18.3607 19.3796 18.4093 19.3705 18.4544 19.3517C18.4995 19.3329 18.5402 19.3049 18.5739 19.2695L19.0584 18.7907C19.2185 18.632 19.3715 18.5116 19.5188 18.4337C19.6543 18.3473 19.8115 18.3012 19.9722 18.3005C20.1063 18.3025 20.2386 18.3309 20.3617 18.3841C20.502 18.4408 20.6493 18.5229 20.808 18.632L22.9217 20.1308C23.0748 20.2305 23.1966 20.3714 23.273 20.5374C23.3392 20.6949 23.3739 20.8638 23.375 21.0347V21.0347Z"
-                      stroke="#273946" stroke-width="2" stroke-miterlimit="10" />
+                      stroke="" stroke-width="2" stroke-miterlimit="10" />
                   </svg>
                 </a>
               </li>
               <li class=" social__item contacts__social-item">
-                <a href="#" class="sosial__link">
+                <a href="#" class="social__link">
                   <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M24.0833 28.3334H9.91659C5.66659 28.3334 2.83325 25.5001 2.83325 21.2501V12.7501C2.83325 8.50008 5.66659 5.66675 9.91659 5.66675H24.0833C28.3333 5.66675 31.1666 8.50008 31.1666 12.7501V21.2501C31.1666 25.5001 28.3333 28.3334 24.0833 28.3334Z"
-                      stroke="#273946" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke="" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
                       stroke-linejoin="round" />
                     <path
                       d="M16.1501 13.4584L19.6918 15.5834C20.9668 16.4334 20.9668 17.7084 19.6918 18.5584L16.1501 20.6834C14.7334 21.5334 13.6001 20.8251 13.6001 19.2668V15.0168C13.6001 13.1751 14.7334 12.6084 16.1501 13.4584Z"
-                      stroke="#273946" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke="" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -542,7 +546,6 @@
   <footer class="footer">
     <div class="container footer__container flex">
       <div class="footer__rules flex">
-        <a href="" class="footer__rules-link">Пользовательское соглашение</a>
         <a href="" class="footer__rules-link">Политика конфиденциальности</a>
       </div>
       <ul class="social footer__social list-reset flex">
