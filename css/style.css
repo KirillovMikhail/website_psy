@@ -1522,7 +1522,7 @@ body {
 
   .advantages__buttom {
     display: flex;
-    min-width: calc(100% + 70px);
+    width: calc(100% + 70px);
     overflow-x: scroll;
     margin-left: -35px;
     margin-right: -35px;
